@@ -1,42 +1,201 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  top: 0;
+  bottom: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+body {
+  margin: 0;
+}
+/* Global */
+.center {
   text-align: center;
 }
+/*  */
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.top {
+  background-color: #0e374e;
+  color: white;
+  padding: 10px;
+  box-shadow: -2px 3px 8px 11px hsla(240, 5%, 41%, 0.2);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.edit-content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 30px;
+  padding-top: 20px;
+  color: #0e374e;
 }
-
+.edit-content-top {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.edit-content-top button {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #0e374e;
+  color: white;
+}
+.edit-content-data {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.edit-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  color: #0e374e;
+  box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, 0.2);
+  font-weight: bold;
+  gap: 20px;
+}
+.edit-card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputData {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding-left: 20px;
+}
+.inputData input {
+  width: 80%;
+}
+.content {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background-color: #0e374e;
+  width: 100%;
+  padding: 40px;
+  color: white;
+  box-sizing: border-box;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.content-top-data {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.content-top-data span {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.content-center {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.content-education,
+.content-work {
+  width: 80%;
+}
+.education-title,
+.work-title {
+  background-color: rgba(14, 55, 78, 0.07);
+  color: #0e374e;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px;
+}
+.card-education,
+.card-work {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: start;
+}
+.education-data,
+.education-description,
+.work-data,
+.work-description {
+  display: flex;
+  flex-direction: column;
+}
 .card {
-  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: white;
+  min-height: 50em;
+  width: 90%;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.1),
+    0 8px 16px -8px rgba(0, 0, 0, 0.25);
 }
 
-.read-the-docs {
-  color: #888;
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .edit-content-data {
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .edit-content {
+    width: 100%;
+  }
+  .edit-card {
+    height: min-content;
+    width: 20%;
+  }
+}
+footer {
+  position: static;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 0;
+  margin: 50px 0 0px 0px;
+  text-align: center;
+  background-color: #0e374e;
+  color: white;
+}
+footer a {
+  color: white;
+}
+@media print {
+  .card {
+    width: 100%;
+    box-shadow: none;
+  }
 }
