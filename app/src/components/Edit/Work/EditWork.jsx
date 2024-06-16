@@ -83,7 +83,9 @@ function EditWork({ work, tempWork, onWorkAdd, onWorkChanged, onWorkDelete }) {
                 onChange={onWorkChanged}
               />
             </div>
-            <button onClick={onWorkAdd}>Valider</button>
+            <div className="validateButton">
+              <button onClick={onWorkAdd}>Valider</button>
+            </div>
           </>
         )}
       </div>

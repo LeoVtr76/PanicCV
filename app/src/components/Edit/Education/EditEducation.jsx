@@ -89,7 +89,9 @@ function EditEducation({
                 onChange={onEducationChanged}
               />
             </div>
-            <button onClick={onEducationAdd}>Valider</button>
+            <div className="validateButton">
+              <button onClick={onEducationAdd}>Valider</button>
+            </div>
           </>
         )}
       </div>
