@@ -17,6 +17,21 @@ body {
 }
 /*  */
 
+.logo,
+.slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.logo img {
+  width: 226.6px;
+  height: 137.6px;
+}
+.slogan img {
+  width: 70%;
+}
 .top {
   background-color: #0e374e;
   color: white;

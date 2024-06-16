@@ -5,6 +5,8 @@ import EditCV from "./components/Edit/EditCV";
 import "./App.css";
 import { v4 as uuidv4 } from "uuid";
 import { useReactToPrint } from "react-to-print";
+import logo from "./assets/logo.png";
+import slogan from "./assets/slogan.png";
 
 function App() {
   const componentRef = useRef();
@@ -91,8 +93,12 @@ function App() {
   return (
     <>
       <div className="top">
-        <h1 className="center">PanicCV</h1>
-        <h2 className="center">Create and Print Your Resume in 2 Minutes!</h2>
+        <div className="logo">
+          <img src={logo} alt="" />
+        </div>
+        <div className="slogan">
+          <img src={slogan} alt="" />
+        </div>
       </div>
       <div className="container">
         <EditCV
